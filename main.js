@@ -1,6 +1,6 @@
 "use strict"
 
-document.querySelector('.form__button').addisEventListener('click', () => {
+document.querySelector('.form__button').addEventListener('click', () => {
    let N = +document.querySelector('.form__input').value;
    let M = +document.getElementById('numberM').value;
    let isEven;
