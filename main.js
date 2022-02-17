@@ -16,9 +16,9 @@ for (let i = N; i <= M; i++) {
    }
 }
 if (even == true) {
-   console.log(`Сума всіх чисел без парних: ${SUM}`);
+   document.querySelector('.ressult__text').innerHTML = SUM;
 } else {
-   console.log(`Сума всіх чисел: ${SUM}`);
+   document.querySelector('.ressult__text2').innerHTML = SUM;
 }
 function inputIntN() {
    N = +prompt("Введіть ціле число N");
@@ -32,5 +32,7 @@ function inputIntM() {
       M = +prompt("ВИ ВВЕЛИ НЕ ЦІЛЕ ЧИСЛО!!!Введіть ціле число заново");
    }
 }
+
+
 
 
