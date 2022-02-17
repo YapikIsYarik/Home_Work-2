@@ -11,8 +11,25 @@
 
 <body>
 
+   <form action="" onsubmit="return false;">
+      <div style="margin: 20px;" class="form__item">
+         <label for="numberN" class="form__label">Ціле число N:</label>
+         <input id="numberN" type="number" class="form__input ">
+      </div>
+      <div style="margin: 20px;" class="form__item">
+         <label for="numberM" class="form__label">Ціле число M:</label>
+         <input id="numberM" type="number" class="form__input-M ">
+      </div>
+      <div style="margin: 20px 10px;" class="checkbox">
+         <input id="intCheck" checked type="checkbox" class="checkbox__input">
+         <label for="intCheck" class="checkbox__label">Пропустити цілі числа?</label>
+      </div>
+      <button style="margin: 20px 10px; height: 30px; width: 100px; " class="button">Порахувати</button>
+   </form>
+
+
    <div class="result">
-      <p> <span style="font-size: 30px;" class="result__text"></span>
+      <p> <span style="font-size: 30px; " class="result__text"></span>
       </p>
 
    </div>

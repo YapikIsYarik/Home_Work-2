@@ -1,43 +1,51 @@
 "use strict"
 
-let N;
-inputIntN(N);
-let M;
-inputIntM(M);
-if (N > M || N == M) {
-   alert("Неможливо порахувати суму!Введіть число N яке має бути меншим за М ")
-   location.reload();
-} else {
-   let even = confirm("Пропускати парні?");
-   let SUM = 0;
-   for (let i = N; i <= M; i++) {
-      if (even == false) {
-         SUM += i;
-      } else {
-         if (i % 2 == 1) {
+document.querySelector('.button').addEventListener('click', () => {
+   let N = +document.querySelector('.form__input').value;
+   intN();
+   let M = +document.querySelector('.form__input-M').value;
+   intM();
+   let even;
+   let check = document.querySelector('.checkbox__input').value;
+   if (document.querySelector('.checkbox__input').checked) {
+      even = true;
+   } else {
+      even = false;
+   }
+   if (N > M || N == M) {
+      alert("Неможливо порахувати суму!Введіть число N яке має бути меншим за М ");
+   } else {
+      let SUM = 0;
+      for (let i = N; i <= M; i++) {
+         if (even == true) {
+            if (i % 2 == 1) {
+               SUM += i;
+               console.log(i % 2);
+            }
+         } else {
             SUM += i;
-            console.log(i % 2);
          }
       }
+      if (even == true) {
+         document.querySelector('.result__text').innerHTML = "Сума всіх чисел без парних: " + SUM;
+      } else {
+         document.querySelector('.result__text').innerHTML = "Сума всіх чисел: " + SUM;
+      }
    }
-   if (even == true) {
 
-      document.querySelector('.result__text').innerHTML = "Сума всіх чисел без парних: " + SUM;
-   } else {
-      document.querySelector('.result__text').innerHTML = "Сума всіх чисел: " + SUM;
+   function intN() {
+      if (N % 1 !== 0) {
+         alert("ВИ ВВЕЛИ НЕ ЦІЛЕ ЧИСЛО!!!Введіть ціле число заново")
+         location.reload();
+      }
    }
-}
-function inputIntN() {
-   N = +prompt("Введіть ціле число N");
-   while (N % 1 !== 0) {
-      N = +prompt("ВИ ВВЕЛИ НЕ ЦІЛЕ ЧИСЛО!!!Введіть ціле число заново");
+   function intM() {
+      if (M % 1 !== 0) {
+         alert("ВИ ВВЕЛИ НЕ ЦІЛЕ ЧИСЛО!!!Введіть ціле число заново")
+         location.reload();
+      }
    }
-}
-function inputIntM() {
-   M = +prompt("Введіть ціле число M");
-   while (M % 1 !== 0) {
-      M = +prompt("ВИ ВВЕЛИ НЕ ЦІЛЕ ЧИСЛО!!!Введіть ціле число заново");
-   }
-}
+})
+
 
 
