@@ -1,14 +1,14 @@
 "use strict"
 
-document.querySelector('.button').addEventListener('click', () => {
+document.querySelector('.form__button').addisEventListener('click', () => {
    let N = +document.querySelector('.form__input').value;
-   let M = +document.querySelector('.form__input-M').value;
-   let even;
+   let M = +document.getElementById('numberM').value;
+   let isEven;
    let check = document.querySelector('.checkbox__input').value;
    if (document.querySelector('.checkbox__input').checked) {
-      even = true;
+      isEven = true;
    } else {
-      even = false;
+      isEven = false;
    }
    error = error();
    if (error === 0) {
@@ -17,7 +17,7 @@ document.querySelector('.button').addEventListener('click', () => {
       } else {
          let sum = 0;
          for (let i = N; i <= M; i++) {
-            if (even == true) {
+            if (isEven == true) {
                if (i % 2 == 1) {
                   sum += i;
 
@@ -27,7 +27,7 @@ document.querySelector('.button').addEventListener('click', () => {
             }
          }
 
-         if (even == true) {
+         if (isEven == true) {
             document.querySelector('.result__text').innerHTML = "Сума всіх чисел без парних: " + sum;
          } else {
             document.querySelector('.result__text').innerHTML = "Сума всіх чисел: " + sum;
