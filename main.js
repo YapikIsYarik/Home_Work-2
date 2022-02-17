@@ -15,21 +15,21 @@ document.querySelector('.button').addEventListener('click', () => {
    if (N > M || N == M) {
       alert("Неможливо порахувати суму!Введіть число N яке має бути меншим за М ");
    } else {
-      let SUM = 0;
+      let sum = 0;
       for (let i = N; i <= M; i++) {
          if (even == true) {
             if (i % 2 == 1) {
-               SUM += i;
+               sum += i;
                console.log(i % 2);
             }
          } else {
-            SUM += i;
+            sum += i;
          }
       }
       if (even == true) {
-         document.querySelector('.result__text').innerHTML = "Сума всіх чисел без парних: " + SUM;
+         document.querySelector('.result__text').innerHTML = "Сума всіх чисел без парних: " + sum;
       } else {
-         document.querySelector('.result__text').innerHTML = "Сума всіх чисел: " + SUM;
+         document.querySelector('.result__text').innerHTML = "Сума всіх чисел: " + sum;
       }
    }
 
