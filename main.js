@@ -20,9 +20,10 @@ if (N > M) {
       }
    }
    if (even == true) {
-      document.querySelector('.ressult__text').innerHTML = SUM;
+
+      document.querySelector('.result__text').innerHTML = "Сума всіх чисел без парних: " + SUM;
    } else {
-      document.querySelector('.ressult__text2').innerHTML = SUM;
+      document.querySelector('.result__text').innerHTML = "Сума всіх чисел: " + SUM;
    }
 }
 function inputIntN() {
