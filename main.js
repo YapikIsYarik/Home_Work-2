@@ -4,7 +4,7 @@ let N;
 inputIntN(N);
 let M;
 inputIntM(M);
-if (N > M) {
+if (N > M || N == M) {
    alert("Неможливо порахувати суму!Введіть число N яке має бути меншим за М ")
    location.reload();
 } else {
@@ -16,6 +16,7 @@ if (N > M) {
       } else {
          if (i % 2 == 1) {
             SUM += i;
+            console.log(i % 2);
          }
       }
    }
