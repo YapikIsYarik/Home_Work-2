@@ -3,7 +3,6 @@
 document.querySelector('.button').addEventListener('click', () => {
    let N = +document.querySelector('.form__input').value;
    let M = +document.querySelector('.form__input-M').value;
-   error();
    let even;
    let check = document.querySelector('.checkbox__input').value;
    if (document.querySelector('.checkbox__input').checked) {
@@ -33,7 +32,6 @@ document.querySelector('.button').addEventListener('click', () => {
          } else {
             document.querySelector('.result__text').innerHTML = "Сума всіх чисел: " + sum;
          }
-
       }
    }
    function error() {
