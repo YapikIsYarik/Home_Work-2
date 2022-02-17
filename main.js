@@ -6,6 +6,7 @@ let M;
 inputIntM(M);
 if (N > M) {
    alert("Неможливо порахувати суму!Введіть число N яке має бути меншим за М ")
+   location.reload();
 } else {
    let even = confirm("Пропускати парні?");
    let SUM = 0;
