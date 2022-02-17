@@ -4,21 +4,25 @@ let N;
 inputIntN(N);
 let M;
 inputIntM(M);
-let even = confirm("Пропускати парні?");
-let SUM = 0;
-for (let i = N; i <= M; i++) {
-   if (even == false) {
-      SUM += i;
-   } else {
-      if (i % 2 == 1) {
+if (N > M) {
+   alert("Неможливо порахувати суму!Введіть число N яке має бути меншим за М ")
+} else {
+   let even = confirm("Пропускати парні?");
+   let SUM = 0;
+   for (let i = N; i <= M; i++) {
+      if (even == false) {
          SUM += i;
+      } else {
+         if (i % 2 == 1) {
+            SUM += i;
+         }
       }
    }
-}
-if (even == true) {
-   document.querySelector('.ressult__text').innerHTML = SUM;
-} else {
-   document.querySelector('.ressult__text2').innerHTML = SUM;
+   if (even == true) {
+      document.querySelector('.ressult__text').innerHTML = SUM;
+   } else {
+      document.querySelector('.ressult__text2').innerHTML = SUM;
+   }
 }
 function inputIntN() {
    N = +prompt("Введіть ціле число N");
@@ -32,7 +36,5 @@ function inputIntM() {
       M = +prompt("ВИ ВВЕЛИ НЕ ЦІЛЕ ЧИСЛО!!!Введіть ціле число заново");
    }
 }
-
-
 
 
