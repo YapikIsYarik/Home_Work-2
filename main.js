@@ -1,7 +1,7 @@
 "use strict"
 
 document.querySelector('.form__button').addEventListener('click', () => {
-   let N = +document.querySelector('.form__input').value;
+   let N = +document.getElementById('numberN').value;
    let M = +document.getElementById('numberM').value;
    let isEven;
    let check = document.querySelector('.checkbox__input').value;
@@ -20,13 +20,11 @@ document.querySelector('.form__button').addEventListener('click', () => {
             if (isEven == true) {
                if (i % 2 == 1) {
                   sum += i;
-
                }
             } else {
                sum += i;
             }
          }
-
          if (isEven == true) {
             document.querySelector('.result__text').innerHTML = "Сума всіх чисел без парних: " + sum;
          } else {
@@ -39,13 +37,11 @@ document.querySelector('.form__button').addEventListener('click', () => {
       if (N % 1 !== 0) {
          alert("ВИ ВВЕЛИ НЕ ЦІЛЕ ЧИСЛО N!!!Введіть ціле число заново")
          error++;
-
       } else if (M % 1 !== 0) {
          alert("ВИ ВВЕЛИ НЕ ЦІЛЕ ЧИСЛО M!!!Введіть ціле число заново")
          error++;
       }
       return error;
    }
-
 })
 
