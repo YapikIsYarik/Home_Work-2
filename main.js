@@ -1,9 +1,8 @@
 "use strict"
 
 document.querySelector('.form__button').addEventListener('click', () => {
-   let N = +document.getElementById('numberN').value;
-   let M = +document.getElementById('numberM').value;
-   let isEven;
+   const N = +document.getElementById('numberN').value;
+   const M = +document.getElementById('numberM').value;
    let check = document.querySelector('.checkbox__input').value;
    if (document.querySelector('.checkbox__input').checked == false) {
       check = "off";
