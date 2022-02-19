@@ -4,32 +4,26 @@ document.querySelector('.form__button').addEventListener('click', () => {
    let N = +document.getElementById('numberN').value;
    let M = +document.getElementById('numberM').value;
    let isEven;
-   let check = document.querySelector('.checkbox__input').value;
+   document.querySelector('.checkbox__input').value;
    if (document.querySelector('.checkbox__input').checked) {
       isEven = true;
    } else {
       isEven = false;
    }
    error = error();
-   if (error === 0) {
-      if (N > M || N == M) {
-         alert("Неможливо порахувати суму!Введіть число N яке має бути меншим за М ");
+   if (error === 0 && N > M || N == M) {
+      alert("Неможливо порахувати суму!Введіть число N яке має бути меншим за М ");
+   } else {
+      let sum = 0;
+      for (let i = N; i <= M; i++) {
+         if (isEven && i % 2 == 0)
+            continue;
+         sum += i;
+      }
+      if (isEven == true) {
+         document.querySelector('.without-pairs').innerHTML += sum + " , ";
       } else {
-         let sum = 0;
-         for (let i = N; i <= M; i++) {
-            if (isEven == true) {
-               if (i % 2 == 1) {
-                  sum += i;
-               }
-            } else {
-               sum += i;
-            }
-         }
-         if (isEven == true) {
-            document.querySelector('.result__text').innerHTML = "Сума всіх чисел без парних: " + sum;
-         } else {
-            document.querySelector('.result__text').innerHTML = "Сума всіх чисел: " + sum;
-         }
+         document.querySelector('.all-number ').innerHTML += sum + " , ";
       }
    }
    function error() {
