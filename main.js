@@ -4,11 +4,9 @@ document.querySelector('.form__button').addEventListener('click', () => {
    let N = +document.getElementById('numberN').value;
    let M = +document.getElementById('numberM').value;
    let isEven;
-   document.querySelector('.checkbox__input').value;
-   if (document.querySelector('.checkbox__input').checked) {
-      isEven = true;
-   } else {
-      isEven = false;
+   let check = document.querySelector('.checkbox__input').value;
+   if (document.querySelector('.checkbox__input').checked == false) {
+      check = "off";
    }
    error = error();
    if (error === 0 && N > M || N == M) {
@@ -16,11 +14,11 @@ document.querySelector('.form__button').addEventListener('click', () => {
    } else {
       let sum = 0;
       for (let i = N; i <= M; i++) {
-         if (isEven && i % 2 == 0)
+         if (check == "on" && i % 2 == 0)
             continue;
          sum += i;
       }
-      if (isEven == true) {
+      if (check == "on") {
          document.querySelector('.without-pairs').innerHTML += sum + " , ";
       } else {
          document.querySelector('.all-number ').innerHTML += sum + " , ";
