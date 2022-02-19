@@ -4,7 +4,6 @@ document.querySelector('.form__button').addEventListener('click', () => {
    const N = +document.getElementById('numberN').value;
    const M = +document.getElementById('numberM').value;
    let check = document.querySelector('.checkbox__input').checked;
-   error();
    if (!error()) {
       let sum = 0;
       for (let i = N; i <= M; i++) {
